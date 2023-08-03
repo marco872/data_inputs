@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Lofts Offers</title>
+    <style>
+        /* Your CSS code goes here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            font-size: 35px;
+        }
+         .container {
+            max-width: 320px; /* Adjust this value as needed */
+            margin: 0 auto; /* Center the container on the page */
+            border: 2px solid #ccc; /* Add a border to create the rectangular box */
+            padding: 20px; /* Add some padding to create space between the border and content */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 14px;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .grid-item {
+            /* Button-like styles */
+            background-color: #EFBBCC; /* Blue background color */
+            color: black; /* Text color */
+            padding: 10px 20px; /* Padding around the content */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Mouse cursor changes to a hand on hover */
+        }
+
+        .sub-grid-item {
+            /* Button-like styles for sub-grid items */
+            background-color: none; /* Gray background color */
+            color: #FF9966; /* Text color */
+            padding: 5px 10px; /* Padding around the content */
+            border: 5px; /* No border */
+            border-radius: 3px; /* Rounded corners */
+            font-size: 14px; /* Font size */
+            cursor: pointer; /* Mouse cursor changes to a hand on hover */
+        }
+        h3 {
+            margin-left: 60px;
+            color: grey;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: grey;
+
+        }
+        h6 {
+            margin-left: 50px;
+            color: grey;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: grey;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+{% block content %}
+<div class="container">
+    <h3>Make Living Work</h3>
+    <h6>Empowering Community: Embrace the Essence of City Lofts through Rentals, Sharing, and Caretaking Initiatives</h6>
+    <p>
+        <small>
+            {% if user.is_authenticated %}
+                <a href="{% url 'data_inputs:dashboard' %}">Login</a> | <a href="{% url 'data_inputs:logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'data_inputs:login' %}">Login</a> | <a href="{% url 'data_inputs:register' %}">Register</a>
+            {% endif %}
+        </small>
+    </p>
+
+
+
+        <div class="grid-container">
+            <a href="loft_rental_form" class="grid-item">Lofts rentals </a>
+            <a href="" class="grid-item"> Stands rentals </a>
+            <a href="" class="grid-item">Minimizing sharing</a>
+        </div>
+            <div class="container" style="display: flex;
+                                         flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 50vh;" >
+                <div class="grid-item" style="margin-bottom: 5px">Maintenance and  Caretaking</div>
+                
+                
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Audio</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Video</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Lighting</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Ventilation/ac</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Bed up and down</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Entrance Door Security</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Panel 1- open/close/fold</a>
+                <a href="" class="sub-grid-item" style="margin-bottom: 5px">Panel 2- open/close/fold</a>
+                
+                <a href="" class="sub-grid-item">Silent Sound System: music, movie</a>
+            </div>
+        </div>
+    </div>
+  </div>
+ {% endblock %} 
+</body>
+</html>

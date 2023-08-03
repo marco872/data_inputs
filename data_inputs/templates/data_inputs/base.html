@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}City Lofts{% endblock %}</title>
+    <!-- Add any common CSS or meta tags here -->
+    <style>
+        <style>
+        /* Your CSS code goes here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            font-size: 35px;
+        }
+         .container {
+            max-width: 320px; /* Adjust this value as needed */
+            margin: 0 auto; /* Center the container on the page */
+            border: 2px solid #ccc; /* Add a border to create the rectangular box */
+            padding: 20px; /* Add some padding to create space between the border and content */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 14px;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .grid-item {
+            /* Button-like styles */
+            background-color: #EFBBCC; /* Blue background color */
+            color: black; /* Text color */
+            padding: 10px 20px; /* Padding around the content */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Mouse cursor changes to a hand on hover */
+        }
+
+        .sub-grid-item {
+            /* Button-like styles for sub-grid items */
+            background-color: none; /* Gray background color */
+            color: #FF9966; /* Text color */
+            padding: 5px 10px; /* Padding around the content */
+            border: 5px; /* No border */
+            border-radius: 3px; /* Rounded corners */
+            font-size: 14px; /* Font size */
+            cursor: pointer; /* Mouse cursor changes to a hand on hover */
+        }
+        h3 {
+            margin-left: 0px;
+            color: grey;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: black;
+            text-align: center;
+
+        }
+        h6 {
+            margin-left: 50px;
+            color: grey;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: grey;
+
+        }
+        label {
+            margin-left: 60px;
+            color: grey;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            color: magenta;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+    
+        {% endblock %}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

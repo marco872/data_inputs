@@ -1,0 +1,51 @@
+{% extends 'data_inputs/base.html' %}
+
+
+
+{% block content %}
+	<div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h3 class="mb-4">Loft Rentals Form</h3>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="rent_value_euro">Rent Value (Euro)</label>
+            <input type="number" class="form-control" id="rent_value_euro" name="rent_value_euro" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="present_status">Present Status</label>
+            <br>
+            <select class="form-control" id="present_status" name="present_status" required>
+              <option value="occupied">Occupied</option>
+              <option value="free">Free</option>
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="rental_period_from">Rental Period From</label>
+            <br>
+            <input type="date" class="form-control" id="rental_period_from" name="rental_period_from">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="rental_period_to">Rental Period To</label>
+            <input type="date" class="form-control" id="rental_period_to" name="rental_period_to">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="loft_number">Loft Number</label>
+            <input type="number" class="form-control" id="loft_number" name="loft_number" required>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+ 
+{% endblock %}
+
+
+
+
+
